@@ -34,17 +34,23 @@ export default class SignIn extends React.Component {
 
                 <form className="signInForm">
                     <FormInput type="email" name="email" required
-                        value={this.state.email}
-                        handleChange={this.handleChange} 
+                        value={ this.state.email }
+                        handleChange={ this.handleChange }
                         label="Email"
                     />
                     <FormInput type="password" name="password" required
-                        value={this.state.password}
-                        handleChange={this.handleChange} 
-                        label = "Password"
+                        value={ this.state.password }
+                        handleChange={ this.handleChange }
+                        label="Password"
                     />
-                    <CustomButton type="submit" onClick={this.handleSubmit}>Sign In</CustomButton>
-                    <CustomButton type="submit" onClick={ signInWithGoogle }>Sign In With Google</CustomButton>
+                    <div className="buttons">
+                        <CustomButton type="submit" onClick={ this.handleSubmit }>
+                            Sign In
+                        </CustomButton>
+                        <CustomButton type="submit" onClick={ signInWithGoogle } isGoogleSignIn>
+                            Sign In With Google
+                        </CustomButton>
+                    </div>
                 </form>
             </div>
         )

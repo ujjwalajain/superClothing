@@ -7,6 +7,8 @@ import Header from './components/header/header.component'
 import Authentication from './pages/authentication/authentication.component';
 import { auth, createUserProfile } from './authLibrary/firebase/firebase.utils';
 
+
+
 import './App.css';
 
 

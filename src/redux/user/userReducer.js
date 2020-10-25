@@ -3,7 +3,7 @@ import { userActionTypes } from './user.types';
 const INITIAL_STATE = {
     currentUser: null
 }
-const userReducer = (state = INITIAL_STATE, action) => {
+const UserReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case userActionTypes.SET_CURRENT_USER:
             return {
@@ -15,4 +15,4 @@ const userReducer = (state = INITIAL_STATE, action) => {
     }
 };
 
-export default userReducer;
+export default UserReducer;

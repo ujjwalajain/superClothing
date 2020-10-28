@@ -6,6 +6,7 @@ import ShopPage from './pages/shopPage/shopPage.component';
 import Header from './components/header/header.component'
 import Authentication from './pages/authentication/authentication.component';
 import { auth, createUserProfile } from './authLibrary/firebase/firebase.utils';
+import { SelectCurrentUser } from './redux/user/user.selector';
 
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
@@ -57,8 +58,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = (state) => ({
+  currentUser: SelectCurrentUser(state)
 })
 
 const mapDispatchToProps = dispatch => ({

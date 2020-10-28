@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
 
 import HomePage from './pages/homePage/homePage.component';
 import ShopPage from './pages/shopPage/shopPage.component';
@@ -61,8 +62,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  currentUser: SelectCurrentUser(state)
+const mapStateToProps = createStructuredSelector({
+  currentUser: SelectCurrentUser
 })
 
 const mapDispatchToProps = dispatch => ({
